@@ -1,5 +1,10 @@
 <?php
 
+/** 
+ * Author : Pijush Gupta <pijush@live.com>
+ * Author URI: https://www.linkedin.com/in/pijush-gupta-php/
+ */
+
 namespace phpRouter;
 
 class Router {
