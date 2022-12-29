@@ -56,26 +56,22 @@ class Router {
 				 * It is to prevent malicious  intention 
 				 */
 
-				if ($methodType == 'GET') {
-					if ($this->queryVar != null && $numParams === count($this->queryVar)) {
-						/**
-						 * sending query var to the function 
-						 */
-						$callback(...$this->queryVar);
-					} else {
-						/**
-						 * calling the callback function 
-						 */
-						$callback();
-					}
-				}
 
-				if ($methodType == 'POST') {
-					if ($numParams > 0) {
-						$callback($_POST);
-					} else {
-						$callback();
-					}
+				if ($methodType == 'GET' && $this->queryVar != null && $numParams === count($this->queryVar)) {
+					/**
+					 * sending query var to the callable function 
+					 */
+					$callback(...$this->queryVar);
+				} elseif ($methodType == 'POST' && $numParams > 0) {
+					/**
+					 * sending post value(s) to the callable function
+					 */
+					$callback($_POST);
+				} else {
+					/**
+					 * calling the callback function 
+					 */
+					$callback();
 				}
 			}
 		}
