@@ -3,7 +3,6 @@
 	"description": "Simple Php Router",
 	"type": "library",
 	"license": "MIT",
-	"version": "1",
 	"authors": [
 		{
 			"name": "Pijush Gupta",
