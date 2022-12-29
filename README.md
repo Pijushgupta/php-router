@@ -46,7 +46,7 @@ https://example.com/
 ```
 
 ```php
-	new Router('/',function($post){ //variable name for the param can be anything
-		var_dump($post);
-	});
+new Router('/',function($post){ //variable name for the param can be anything
+	var_dump($post);
+});
 ```
