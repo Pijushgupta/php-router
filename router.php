@@ -35,6 +35,7 @@ class Router {
 	private function run() {
 
 		$passedUrl = parse_url($_SERVER['REQUEST_URI']);
+		$methodType = $_SERVER['REQUEST_METHOD'];
 		$this->serverUri = $passedUrl['path'];
 
 		if (array_key_exists('query', $passedUrl)) {
@@ -55,16 +56,26 @@ class Router {
 				 * It is to prevent malicious  intention 
 				 */
 
-				if ($this->queryVar != null && $numParams === count($this->queryVar)) {
-					/**
-					 * sending query var to the function 
-					 */
-					$callback(...$this->queryVar);
-				} else {
-					/**
-					 * calling the callback function 
-					 */
-					$callback();
+				if ($methodType == 'GET') {
+					if ($this->queryVar != null && $numParams === count($this->queryVar)) {
+						/**
+						 * sending query var to the function 
+						 */
+						$callback(...$this->queryVar);
+					} else {
+						/**
+						 * calling the callback function 
+						 */
+						$callback();
+					}
+				}
+
+				if ($methodType == 'POST') {
+					if ($numParams > 0) {
+						$callback($_POST);
+					} else {
+						$callback();
+					}
 				}
 			}
 		}
