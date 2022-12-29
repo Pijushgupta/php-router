@@ -16,7 +16,7 @@ include_once 'Location of file';
 ###### OR use Composer/auto-loader
 
 ```php
-composer require pijush_gupta/php-router
+composer require pijush_gupta/php-router:dev-main
 ```
 
 ###### Using it in the project
