@@ -30,13 +30,13 @@ new Router('/', function () {
 ###### Get method with Parameters
 
 ```
-	https://example.com?a=Pijush&b=Gupta
+https://example.com?a=Pijush&b=Gupta
 ```
 
 ```php
-	new Router('/',function($a,$b){ //exact number of variables and name as query vars from url.
-		echo $a . $b;
-	})
+new Router('/',function($a,$b){ //exact number of variables and name as query vars from url.
+	echo $a . $b;
+})
 ```
 
 ###### Post method
