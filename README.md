@@ -2,7 +2,7 @@
 
 ###### Clone this repository
 
-```bash
+```sh
 git clone https://github.com/Pijushgupta/php-router.git
 
 ```
@@ -13,9 +13,9 @@ git clone https://github.com/Pijushgupta/php-router.git
 include_once 'Location of file';
 ```
 
-OR use Composer/auto-loader
+###### OR use Composer/auto-loader
 
-###### Using it to the project
+###### Using it in the project
 
 ```php
 use phpRouter\Router;

@@ -32,6 +32,7 @@ class Router {
 		$this->serverUri = $_SERVER['REQUEST_URI'];
 
 
+
 		foreach ($this->routes as $path => $callback) {
 			if ($this->serverUri === $path) $callback();
 		}
