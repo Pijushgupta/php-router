@@ -1,0 +1,14 @@
+{
+    "name": "pijush_gupta/php-router",
+    "description": "Simple Php Router",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pijush Gupta",
+            "email": "Pijush@live.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
