@@ -3,7 +3,7 @@
 ###### Clone this repository
 
 ```bash
-git clone https://github.com/Pijushgupta/php-router
+git clone https://github.com/Pijushgupta/php-router.git
 
 ```
 
